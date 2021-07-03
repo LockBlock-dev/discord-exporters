@@ -1,0 +1,30 @@
+{
+  "name": "discord-exporters",
+  "version": "1.0.0",
+  "description": "Easily export your Discord data",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "readline-sync": "^1.4.10"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LockBlock-dev/discord-exporters.git"
+  },
+  "author": "LockBlock-dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LockBlock-dev/discord-exporters/issues"
+  },
+  "homepage": "https://github.com/LockBlock-dev/discord-exporters#readme",
+  "keywords": [
+    "discord",
+    "exporters",
+    "backup",
+    "save",
+    "api"
+  ]
+}
