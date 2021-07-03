@@ -40,7 +40,7 @@ debug: false,
 //debug logs
 ```
 
-• Run it : with the [starter](./start.bat) / by doing `node login.js` / by doing `npm start`
+• Run it : with the [starter](./start.bat) / by doing `node index.js` / by doing `npm start`
 
 • Find the results in the [results](./results) folder
 
