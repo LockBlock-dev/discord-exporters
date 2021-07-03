@@ -30,7 +30,7 @@ This tool can be use alongside with [DiscordChatExporter](https://github.com/Tyr
 
 • Download the project or clone it
 
-• Go to the Discord-Exporters exporter folder and do `npm install`
+• Go to the Discord-Exporters folder and do `npm install`
 
 • Edit the [config](./config.json) :
 ```js
