@@ -21,7 +21,7 @@ This tool can be use alongside with [DiscordChatExporter](https://github.com/Tyr
 | Name | Description | Ban risk level |  Reason |
 | --- | --- | --- | --- |
 | [Friends-List](./modules/Friends-List.js) | Export your friends | <span style="color:green">Low</span> | Only 1 request is made
-| [Guilds](./modules/Guilds.js) | Export your friends | <span style="color:orange">Medium</span> | A lot of requests are made
+| [Guilds](./modules/Guilds.js) | Export your guilds | <span style="color:orange">Medium</span> | A lot of requests are made
 
 
 ## How to use
