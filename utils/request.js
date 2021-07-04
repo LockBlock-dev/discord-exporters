@@ -34,12 +34,11 @@ module.exports = async (token, path, method, data) => {
         }
     })
     .catch(error => {
-        var error = error.response
+        var err = error.response
         var data = {}
-        data.status = error.status
-        data.statusText = error.statusText
-        error.data ? data.message =error.data.message : "Invalid API response"
-
+        err.status ? data.status = err.status : data.status = null
+        err.statusText ? data.statusText = err.statusText : data.statusText = null
+        err.data.message ? data.message = err.data.message : data.message = "Invalid API response"
         return { success: false, data: data }
     })
 }
