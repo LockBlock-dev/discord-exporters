@@ -20,8 +20,9 @@ This tool can be use alongside with [DiscordChatExporter](https://github.com/Tyr
 
 | Name | Description | Ban risk level |  Reason |
 | --- | --- | --- | --- |
+| [Emotes](./modules/Emotes.js) | Export your emotes | ![Low](https://img.shields.io/badge/-Low-brightgreen) | Emotes are downloaded from the CDN
 | [Friends-List](./modules/Friends-List.js) | Export your friends | ![Low](https://img.shields.io/badge/-Low-brightgreen) | Only 1 request is made
-| [Guilds](./modules/Guilds.js) | Export your guilds | ![Medium](https://img.shields.io/badge/-Medium-orange) | A lot of requests are made
+| [Guilds](./modules/Guilds.js) | Export your guilds | ![Medium](https://img.shields.io/badge/-Medium-orange) | A lot of requests are made (with invites)
 
 
 ## How to use
@@ -44,7 +45,7 @@ debug: false,
 
 • Find the results in the [results](./results) folder
 
-• These are in 2 formats :
+• These are in 3 formats :
 
 JSON :
 ```json
@@ -59,6 +60,8 @@ TEXT :
 ```css
 PROPERTY1 : PROPERTY2
 ```
+IMAGES :
+``emotes/GUILD_NAME/EMOTE_NAME.FILE_EXTENSION``
 
 
 ## Copyright
