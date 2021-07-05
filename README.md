@@ -2,7 +2,7 @@
 
 Powerful NodeJS scripts to easily export your Discord data.
 
-Made with [![axios](https://img.shields.io/github/package-json/dependency-version/LockBlock-dev/discord-exporters/axios)](https://www.npmjs.com/package/axios)
+[![axios](https://img.shields.io/github/package-json/dependency-version/LockBlock-dev/discord-exporters/axios)](https://www.npmjs.com/package/axios)
 
 [![GitHub stars](https://img.shields.io/github/stars/LockBlock-dev/discord-exporters.svg)](https://github.com/LockBlock-dev/discord-exporters/stargazers)
 
