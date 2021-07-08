@@ -1,6 +1,7 @@
 const fs = require('fs')
 const request = require('../utils/request')
-const debug = require('../config.json').debug
+const debug = require('../config').debug
+const constants = require('../utils/constants')
 
 var user, id
 var friends = ""
@@ -16,28 +17,32 @@ const setMax = (list) => {
 }
 
 module.exports = async (token) => {
-    var list = await request(token, "/users/@me/relationships", "GET")
+    if (!constants.tokenRe.test(token) && !constants.MFAtokenRe.test(token)) {
+        console.log("\nDiscord Exporters - INVALID TOKEN PROVIDED")
+    } else {
+        var list = await request(token, "/users/@me/relationships", "GET")
 
-    if (debug) {
-        list.success ? console.log(`Relationships: ${list.success}`) : console.log(`Relationships: ${list.success} => ${JSON.stringify(list.data)}`)
+        if (debug) {
+            list.success ? console.log(`Relationships: ${list.success}`) : console.log(`Relationships: ${list.success} => ${JSON.stringify(list.data)}`)
+        }
+    
+        list = list.data
+    
+        setMax(list)
+    
+        for (var e in list) {
+            user = list[e].user
+            id = user.id
+            user =  `${user.username}#${user.discriminator}`
+            friends += `${user}${" ".repeat((max - user.length) + 1)}: ${id}\n`
+            json.push({
+                username: user,
+                id: id
+            })
+        }
+    
+        fs.writeFileSync("./results/friends_list.txt", friends)
+        fs.writeFileSync("./results/friends_list.json", JSON.stringify(json, null, 1))
+        console.log("FRIENDS_LIST exported in 'results' folder!")
     }
-
-    list = list.data
-
-    setMax(list)
-
-    for (var e in list) {
-        user = list[e].user
-        id = user.id
-        user =  `${user.username}#${user.discriminator}`
-        friends += `${user}${" ".repeat((max - user.length) + 1)}: ${id}\n`
-        json.push({
-            username: user,
-            id: id
-        })
-    }
-
-    fs.writeFileSync("./results/friends_list.txt", friends)
-    fs.writeFileSync("./results/friends_list.json", JSON.stringify(json, null, 1))
-    console.log("FRIENDS_LIST exported in 'results' folder!")
 }

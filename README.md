@@ -20,9 +20,10 @@ This tool can be use alongside with [DiscordChatExporter](https://github.com/Tyr
 
 | Name | Description | Ban risk level |  Reason |
 | --- | --- | --- | --- |
-| [Emotes](./modules/Emotes.js) | Export your emotes | ![Low](https://img.shields.io/badge/-Low-brightgreen) | Emotes are downloaded from the CDN
-| [Friends-List](./modules/Friends-List.js) | Export your friends | ![Low](https://img.shields.io/badge/-Low-brightgreen) | Only 1 request is made
-| [Guilds](./modules/Guilds.js) | Export your guilds | ![Medium](https://img.shields.io/badge/-Medium-orange) | A lot of requests are made (with invites)
+| [Emotes](./doc/Emotes.md) | Export your emotes | ![Low](https://img.shields.io/badge/-Low-brightgreen) | Emotes are downloaded from the CDN |
+| [Friends-List](./doc/Friends-List.md) | Export your friends | ![Low](https://img.shields.io/badge/-Low-brightgreen) | Only 1 request is made |
+| [Guilds](./doc/Guilds.md) | Export your guilds | ![Medium](https://img.shields.io/badge/-Medium-orange) | A lot of requests are made (with invites) |
+| [Token](./doc/Token.md) | Get your token | ![None](https://img.shields.io/badge/-None-inactive) | Discord is closed during this process |
 
 
 ## How to use
@@ -39,6 +40,10 @@ token: "",
 //your Discord token
 debug: false,
 //debug logs
+pathToDiscordDB: "",
+//path to Discord leveldb
+//for Windows it is: C:/Users/USERNAME/AppData/Roaming/discord/Local Storage/leveldb
+//used only in the Token getter
 ```
 
 • Run it : with the [starter](./start.bat) / by doing `node index.js` / by doing `npm start`
@@ -61,7 +66,12 @@ TEXT :
 PROPERTY1 : PROPERTY2
 ```
 IMAGES :
-``emotes/GUILD_NAME/EMOTE_NAME.FILE_EXTENSION``
+`emotes/GUILD_NAME/EMOTE_NAME.FILE_EXTENSION`
+
+
+## Credits
+
+Original [leveldb-reader](https://github.com/harshvsingh8/leveldb-reader) I used to make my own.
 
 
 ## Copyright
