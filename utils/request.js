@@ -13,7 +13,6 @@ module.exports = async (token, path, method, data) => {
             "user-agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) discord/1.0.9002 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36",                  
             "content-type": "application/json",
             "authorization": `${token}`,
-            "accept-encoding": "UTF8",
             "sec-fetch-dest": "empty",
             "sec-fetch-mode": "cors",
             "sec-fetch-site": "same-origin",
